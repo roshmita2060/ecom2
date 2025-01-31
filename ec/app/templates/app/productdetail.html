@@ -19,8 +19,9 @@ Category{% endblock title %}
                     <li>{{product.description}}</li>
                 </ul>
                 <div class="buttons row flex" style="font-family:Rajdhani;">
+                    <form action="/add-to-cart" class="d-inline"><
                     <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white">
-                        Add to Cart</button>
+                        Add to Cart</button>/form>
                     <div class="btn btn-dark p-1 m-1 btn-lg"><a href="{%url'checkout'%}" class="text-decoration-none text-white"> Buy Now
                     </a></div>
 
