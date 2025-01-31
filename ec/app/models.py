@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 STATE_CHOICES =(
     ('ktm','ktm'),
-    ('Lalitpur','Lalitpur')
-    ('Bhaktapur','Bhaktapur')
-    ('Butwal','Butwal')
+    ('Lalitpur','Lalitpur'),
+    ('Bhaktapur','Bhaktapur'),
+    ('Butwal','Butwal'),
 )
 CATEGORY_CHOICES = (
     ('CR', 'Curd'),
