@@ -1,9 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 
-{% block title %}
-Home
-{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block banner-slider %}
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -19,107 +17,46 @@ Home
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon"></span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon"></span>
     </button>
 </div>
-{% endblock banner-slider %}
+{% endblock %}
 
 {% block information %}
 <div class="container">
     <div class="row bg-success text-center p-5 text-white border-bottom shadow">
         <h1>Products</h1>
-        <small class="fs-5">
-            Product is this . Product is this . Product is this . Product is this . Product is this . Product is this . 
-            Product is this . Product is this . Product is this . Product is this . Product is this . Product is this . 
-            Product is this . Product is this .
-        </small>
+        <small class="fs-5">Discover our wide range of dairy products.</small>
     </div>
 </div>
-{% endblock information %}
+{% endblock %}
 
 {% block main-content %}
 <div class="container">
     <h1 class="text-center">Our Products</h1>
     <br><br>
     <div class="row">
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk smbg">
-                <a href="{ % url 'category' 'GH' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/buffalo-ghee.png' %}" class="img-fluid" alt="Ghee">
-                        <p class="milkpro">Ghee</p>
-                    </div>
-                </a>
-            </div>
+        <div class="col-md-4 mb-4">
+            <a href="{% url 'category' 'GH' %}">
+                <img src="{% static 'app/images/product/buffalo-ghee.png' %}" class="img-fluid" alt="Ghee">
+                <p class="text-center">Ghee</p>
+            </a>
         </div>
-
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk curdbgpro">
-                <a href="{ % url 'category' 'CR' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/curd-total.png' %}" class="img-fluid" alt="Curd">
-                        <p class="milkpro">Curd</p>
-                    </div>
-                </a>
-            </div>
+        <div class="col-md-4 mb-4">
+            <a href="{% url 'category' 'CR' %}">
+                <img src="{% static 'app/images/product/curd-total.png' %}" class="img-fluid" alt="Curd">
+                <p class="text-center">Curd</p>
+            </a>
         </div>
-
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk buttermilk">
-                <a href="{ % url 'category' 'IC' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/kulfi.png' %}" class="img-fluid" alt="Kulfi">
-                        <p class="milkpro">Ice Creams</p>
-                    </div>
-                </a>
-            </div>
+        <div class="col-md-4 mb-4">
+            <a href="{% url 'category' 'IC' %}">
+                <img src="{% static 'app/images/product/kulfi.png' %}" class="img-fluid" alt="Ice Creams">
+                <p class="text-center">Ice Creams</p>
+            </a>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk smbg">
-                <a href="{ % url 'category' 'ms' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/milk-shake-chocolate.png' %}" class="img-fluid" alt="Milkshake">
-                        <p class="milkpro">Milkshake</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk curdbgpro">
-                <a href="{ % url 'category' 'ML' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/cow-milk.png' %}" class="img-fluid" alt="Milk">
-                        <p class="milkpro">Milk</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"
-            style="animation-duration: 1s; animation-delay: 0.6s;">
-            <div class="goodnesssec buttermilk buttermilk">
-                <a href="{ % url 'category' 'IC' %}">
-                    <div class="goodnessccont text-center">
-                        <img src="{% static 'app/images/product/icbars.png' %}" class="img-fluid" alt="Icebar">
-                        <p class="milkpro">Icebar</p>
-                    </div>
-                </a>
-            </div>
-        </div>        
-    </div>
-    <br /><br />
-{% endblock main-content %}
+</div>
+{% endblock %}
